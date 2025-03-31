@@ -1,4 +1,5 @@
 import type { ModelsResponse } from "~/services/copilot/get-models"
+import type { ApiKeyOptions } from "./api-key"
 
 export interface State {
   githubToken?: string
@@ -14,6 +15,9 @@ export interface State {
   // Rate limiting configuration
   rateLimitSeconds?: number
   lastRequestTimestamp?: number
+  
+  // API Key configuration
+  apiKeyOptions?: ApiKeyOptions
 }
 
 export const state: State = {
